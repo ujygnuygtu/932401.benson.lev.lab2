@@ -1,0 +1,143 @@
+:root {
+    --white: #ffffff;
+    --red: #b22222;
+    --dark: #222222;
+    --light-red: #fff5f5;
+    --border: #dddddd;
+    --font: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--dark);
+    background-color: var(--white);
+    margin: 20px;
+    position: relative;
+}
+
+h2 {
+    color: var(--dark);
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 5px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    border: 3px solid var(--red);
+}
+
+main {
+    background-color: #CD5C5C;
+    padding: 10px;
+}
+
+section {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    position: static;
+    background-color: var(--white);
+}
+
+aside {
+    float: right;
+    width: 200px;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: var(--light-red);
+    border-left: 4px solid var(--red);
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 50%;
+    padding: 8px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-family: var(--font);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--red);
+    outline: none;
+    background-color: var(--light-red);
+}
+
+a:visited {
+    color: purple;
+}
+
+.btn-submit {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.btn-submit::after {
+    content: "❤";
+    color: var(--red);
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-submit:hover {
+    background-color: var(--red);
+}
+
+.btn-submit:active {
+    transform: translateY(3px);
+}
+
+footer {
+    clear: both;
+    margin-top: 20px;
+    padding: 1.2rem 0.5rem;
+    background-color: var(--red);
+    color: var(--white);
+    border-top: 2px solid var(--dark);
+}
+
